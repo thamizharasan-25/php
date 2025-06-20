@@ -1,0 +1,2 @@
+<? echo "index in app"; ?>
+<?
