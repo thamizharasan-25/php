@@ -14,7 +14,6 @@ include 'libs/load.php';
     <meta name="author" content="TAMILANDVETRI">
     <meta name="generator" content="Astro v5.9.2">
     <title>Album example · Bootstrap v5.3</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
     <script src="../assets/js/color-modes.js"></script>
     <link href="/app/assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta name="theme-color" content="#712cf9">
