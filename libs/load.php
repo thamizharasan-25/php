@@ -9,7 +9,6 @@ function validates($Username, $Password)
     if ($Username == "A@gamil.com" and $Password == "tamil123") {
         return true;
     } else {
-        printf("not called");
         return false;
     }
 }
