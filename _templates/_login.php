@@ -8,7 +8,6 @@ if ($result) {
 	<div class="bg-body-tertiary p-5 rounded mt-3">
 		<h1>LOGIN SUCCESS</h1>
 		<p class="lead">This IS THE LOGIN SUCCES PAGE.</p>
-
 	</div>
 </main>
 <?php
