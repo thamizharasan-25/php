@@ -1,5 +1,8 @@
 <?php
 
+include_once 'includes/Mic.class.php';
+include_once 'includes/User.class.php';
+include_once 'includes/Database.class.php';
 function load_template($name)
 {
     include $_SERVER['DOCUMENT_ROOT']."/app/_templates/$name.php";
@@ -12,7 +15,8 @@ function validates($Username, $Password)
         return false;
     }
 }
-function signup($username, $password, $email, $phone)
+
+function login($username, $password)
 {
     $dbservername = "localhost";
     $dbusername = "root";
@@ -25,15 +29,15 @@ function signup($username, $password, $email, $phone)
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "INSERT INTO `auth` (`username`, `password`, `email`, `phone`, `blocked`, `active`)
-VALUES ('$username', '$password','$email', '$phone', '0', '1')";
+    $sql = "SELECT * FROM  auth WHERE username ='$username' AND password='$password'";
+    $result = $conn->query($sql);
     $error = false;
-    if ($conn->query($sql) === TRUE) {
-     // echo "New record created successfully";
-      $error = false;
+    if ($result && $result->num_rows === 1) {
+        $error = true;
     } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
-      $error = $conn->error;
+        //echo "Error: " . $sql . "<br>" . $conn->error;
+        //$error = $conn->error;
+        $error = false;
     }
 
     $conn->close();

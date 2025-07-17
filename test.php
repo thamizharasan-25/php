@@ -1,5 +1,6 @@
 <pre> <?php
 include 'libs/load.php';
+
 //  print("SERVER\n");
 // print_r($_SERVER);
 // print("GET\n");
@@ -11,10 +12,9 @@ include 'libs/load.php';
 // print("COOKIES\n");
 // print_r($_COOKIE);
 
-if(signup("tamicdsvdv","adfsdvfdv", "test@gmail.com", "9926051510")){
+if (signup("tamicdsvdv", "adfsdvfdv", "test@gmail.com", "9926051510")) {
     echo "success";
-}else
-    {
+} else {
     echo "failed";
 }
 
