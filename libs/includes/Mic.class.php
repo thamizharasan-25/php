@@ -12,5 +12,8 @@
     public $usb_port;
     public $model;
     public $price;
-    
+     function __construct($brand)
+     {
+        $this->$brand;
+     }
 }

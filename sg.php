@@ -1,31 +1,30 @@
 <pre>
 <?php
-//session_start();// it creates a unique id when it calls 
- 
-setcookie("tamils", "testcookie",  100+ time(),"/");
+//session_start();// it creates a unique id when it calls
+
+setcookie("tamils", "testcookie", 100 + time(), "/");
 include 'libs/load.php';
 
 print("SESSION\n");
 print_r($_SESSION);
 
 
-if(isset($_GET['clear'])){
+if (isset($_GET['clear'])) {
     print"clearing\n";
-   Session::unset();
+    Session::unset();
 }
-if(isset($_GET['destroy'])){
+if (isset($_GET['destroy'])) {
     print"destroying...\n";
     Session::destroy();
 }
-if(Session::isset('a'))// :: is used to call the static functions
-{  
+if (Session::isset('a')) {// :: is used to call the static functions
     printf("A already exists...value:".Session::get('a')."\n");
-}else{
+} else {
     // $_SESSION['a'] = time();
-    Session::set('a',time());
+    Session::set('a', time());
     print "Assignning new value for a:".Session::get('a')."\n";
 }
-
-
+$id = session_id();
+ print("Session Id: ".$id);
 ?>
 </pre>

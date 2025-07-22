@@ -4,14 +4,14 @@ $result = false;
 if (isset($_POST['username']) and isset($_POST['password']) and !empty($_POST['username']) and !empty($_POST['password']))  {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $result = login($username, $password);
+    $result = User::login($username, $password);
 	if($result){
 		$login = true;
 	}
 }
 ?>
 	<main class="form-signin w-100 m-auto">
-	<form method="post" action="login.php">
+	<form method="post" action="">
 		<img class="mb-4" src=https://www.svgrepo.com/show/303183/google-2015-logo.svg alt="" width="150"
 			height="150">
 
