@@ -2,6 +2,7 @@
 include'libs/load.php';
 $username="tamiii";
 $password="tamiii";
+$result = null;
 if(isset($_GET['logout'])){
     session::destroy();
     die("session destryed<a href='logintest.php'>Login Again</a>");
