@@ -11,7 +11,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and !empty($_POST['u
 }
 ?>
 	<main class="form-signin w-100 m-auto">
-	<form method="post" action="">
+	<form method="post" action="login.php">
 		<img class="mb-4" src=https://www.svgrepo.com/show/303183/google-2015-logo.svg alt="" width="150"
 			height="150">
 
@@ -38,18 +38,18 @@ if (isset($_POST['username']) and isset($_POST['password']) and !empty($_POST['u
 
 	</form>
 </main>
-<?
+<?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-if ($login) {
+	if ($login) {
     //if ($result) {
-        ?>
+     ?>
 	<main class="container">
 	<div class="bg-body-tertiary p-5 rounded mt-3">
 		<h1>LOGIN SUCCESS</h1>
 		<p class="lead">This IS THE LOGIN SUCCES PAGE.</p>
 	</div>
   	</main>
-	<?
+	<?php
     }
 	else 
 	{
@@ -61,11 +61,6 @@ if ($login) {
 		</div>
 		</main>
 <?php
-    }
-// }	
-// else{
-    
-
- }
-
+	}
+}
 ?> 
