@@ -1,7 +1,7 @@
 <?php
 include 'libs/load.php';
-$username="asdasd";
-$password="4545454545";
+$username="tamil";
+$password=isset($_GET['password'])?$_GET['password']: '';
 $result = null;
 if(isset($_GET['logout'])){
     session::destroy();
@@ -20,7 +20,7 @@ if(Session::get('is_loggedin')){
         session::set('is_loggedin', true);
         session::set('session_user', $result);//assining the session data of the user in the session
     } else {
-        echo"Login failed ";
+        echo"Login failed   $username";
     }
 }
 

@@ -39,6 +39,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and !empty($_POST['u
 	</form>
 </main>
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	if ($login) {
     //if ($result) {

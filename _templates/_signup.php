@@ -32,6 +32,7 @@ if ($signup) {
 
 } else {
     ?>
+
 	<main class="form-signup w-100 m-auto">
 		<form method="post" action="signup.php">
 			<img class="mb-4" src=https://www.svgrepo.com/show/303183/google-2015-logo.svg alt="" width="150"
