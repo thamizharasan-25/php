@@ -11,7 +11,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and !empty($_POST['u
 }
 ?>
 	<main class="form-signin w-100 m-auto">
-	<form method="post" action="login.php">
+	<form method="post" action="app">
 		<img class="mb-4" src=https://www.svgrepo.com/show/303183/google-2015-logo.svg alt="" width="150"
 			height="150">
 
@@ -39,7 +39,6 @@ if (isset($_POST['username']) and isset($_POST['password']) and !empty($_POST['u
 	</form>
 </main>
 <?php
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	if ($login) {
     //if ($result) {
